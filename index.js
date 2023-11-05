@@ -30,7 +30,7 @@ function populateIndex(list){
             
         option.innerHTML += list[i].start + " : " + list[i].land;
         if(list[i].site == 'a' || list[i].site == 'b'){ 
-            option.innerHTML += '<img class="indexIcon" src="icons/' + list[i].site +  '.png' + '">';
+            option.innerHTML += '<img class="indexIcon" src="icons/' + list[i].site.toUpperCase() +  '.png' + '">';
         }else{
             option.innerHTML += '<img class="indexIcon" src="icons/m.png">';
         }
