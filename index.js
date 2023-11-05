@@ -32,7 +32,7 @@ function populateIndex(list){
         if(list[i].site == 'a' || list[i].site == 'b'){ 
             option.innerHTML += '<img class="indexIcon" src="icons/' + list[i].site.toUpperCase() +  '.png' + '">';
         }else{
-            option.innerHTML += '<img class="indexIcon" src="icons/m.png">';
+            option.innerHTML += '<img class="indexIcon" src="icons/M.png">';
         }
         option.setAttribute("class", "indexItem");
         option.style.background = list[i].side == "t" ? "rgba(255, 165, 0, 0.329)" : "rgba(0, 0, 255, 0.329)";
