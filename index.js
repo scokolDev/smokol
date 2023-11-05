@@ -12,10 +12,10 @@ let isFull = false;
 //clear content of all media containers
 function clearMedia(){
     videoWindow.setAttribute('src', "");
-    friendly.setAttribute('src', "");
-    crosshairView.setAttribute('src', "");
-    crosshairDotView.setAttribute('src', "");
-    enemy.setAttribute('src', "");
+    friendly.setAttribute('src', "empty.png");
+    crosshairView.setAttribute('src', "empty.png");
+    crosshairDotView.setAttribute('src', "empty.png");
+    enemy.setAttribute('src', "empty.png");
     friendly.style.boxShadow = "";
     enemy.style.boxShadow = "";
     infoBox.innerHTML = "";
@@ -47,7 +47,7 @@ function populateIndex(list){
             }
             if(document.getElementById("selected") != null){
                 document.getElementById("selected").removeAttribute('style');
-                document.getElementById("selected").style.animation = "shrinkT 1s"; //previousSide == "t" ? "shrinkT "+ "1s" : "shrinkCT " + "1s";
+                document.getElementById("selected").style.animation = "shrinkT 1s";
                 document.getElementById("selected").style.height = "2vw";
                 document.getElementById("selected").style.background = previousSide == "t" ? "rgba(255, 165, 0, 0.329)" : "rgba(0, 0, 255, 0.329)";
                 document.getElementById("selected").removeAttribute('id');
@@ -90,9 +90,3 @@ function fullScreenToggle() {
         isFull = true;
     }
 }document.getElementById("full").addEventListener("click", fullScreenToggle);
-// document.getElementById("home").addEventListener("click", function () {
-//     if(isFull){fullScreenToggle();}
-//     document.getElementById("mediaContainer").style.visibility = "hidden";
-//     document.getElementById("index").style.animation = "";
-//     mapHolder.style.visibility = "visible";
-// });
