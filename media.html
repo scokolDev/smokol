@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const map = urlParams.get('map');
+        </script>
+        <link rel="stylesheet" href="style.css">
+        <title id="title"></title>
+    </head>
+    <body>
+        <div class="Wrapper">
+            <div class="mediaContainer" id="mediaContainer">
+                <div class="index" id="index"></div>
+                
+                <image class="friendly" id="friendly" src=""></image>
+                <div class="source" id="source"></div>
+                <image class="crosshairView" id="crosshairView" src=""></image>
+                <image class="crosshairDotView" id="crosshairDotView" src=""></image>
+                <image class="enemy" id="enemy"  src=""></image>
+                <video  muted autoplay loop class="videoWindow" src="" id="videoWindow"></video>
+                <a href="index.html"><button class="home" id="home"></button></a>
+                <button class="full" id="full"></button> 
+            </div> 
+        </div>
+    </body>
+    <script src= "data.js"></script>
+    <script src="index.js"></script>
+    <script>
+        console.log(map);
+        document.getElementById("title").innerHTML = "💨 " + map.charAt(0).toUpperCase() + map.slice(1) + " Smokes 💨"
+        clearMedia();
+        populateIndex(eval(map + "Arr"));
+    </script>
+
+</html>

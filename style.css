@@ -1,0 +1,222 @@
+body{
+    background: #0e0e0e;
+}
+.Wrapper{
+    background: #232323;
+    padding: 0%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:80vw;
+    aspect-ratio: 16/9;
+    border-radius: 15px;
+}
+.mapHolder {
+    display: grid;
+    grid-template-columns: 8vw 8vw 8vw 8vw;
+    grid-template-rows: 8vw 8vw;
+
+    box-sizing: border-box;
+    width: 50vw;
+    height: 50vh;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: rgba(150, 150, 150, 0.05);
+
+    align-content: space-evenly;
+    justify-content: space-evenly;
+}
+.map{
+    box-sizing: border-box;
+    width: 8vw;
+    aspect-ratio: 1;
+    background-size: contain;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 20px 3px rgba(255, 255, 255, 0.5);
+} 
+.map:hover{
+    animation: crunch .5s;
+    box-shadow: 0px 0px 4px 3px rgba(255, 255, 255, 0.5);
+}
+@keyframes crunch {
+    0%{box-shadow: 0px 0px 20px 3px rgba(255, 255, 255, 0.5);};
+    100%{box-shadow: 0px 0px 4px 3px rgba(255, 255, 255, 0.5);};
+}
+
+.mediaContainer{
+    box-sizing: border-box;
+    width: 80vw;
+    height: 45vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: visible;
+    background: rgba(150, 150, 150, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+}
+.index{
+    width: 15vw;
+    height: 47vw;
+    direction:rtl; 
+    position: absolute;
+    top:-1vw;
+    left: 0;
+    opacity: 1;
+
+    overflow: scroll;
+    padding-bottom: 20px;
+    margin-bottom: -20px;
+    padding-left: 20px;
+    margin-left: -20px;
+    padding-top: 15px;
+
+    background: rgba(150, 150, 150, 0.05);
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+
+}
+@keyframes growT {
+    0%{height: 2vw;};
+    100%{height: 4vw;};
+}
+@keyframes shrinkCT {
+    0%{height: 4vw;};
+    100%{height: 2vw;};
+}
+@keyframes growCT {
+    0%{height: 2vw;};
+    100%{height: 4vw;};
+}
+@keyframes shrinkCT {
+    0%{height: 4vw;};
+    100%{height: 2vw;};
+}
+.indexItem{
+    direction:ltr; 
+    width: 15vw;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-right: 4px solid black;
+    border-left: 4px solid black;
+    height: 2vw;
+    align-items: center;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.indexIcon{
+    height: 1.8vw;
+    aspect-ratio: 1;
+}
+@keyframes moveLeft {
+    0%{left:-50vw; opacity: 0;};
+    100%{left:0vw; opacity: 1;};
+}
+
+@keyframes VMD {
+    0%{top: -24vw;}
+    100%{top: 1vw;}
+}
+.videoWindow{
+    width: 48vw;
+    aspect-ratio: 16/9;
+    left: 16vw;
+    position: absolute;
+    background: rgba(150, 150, 150, 0.05);
+    border-radius: 15px;
+    animation: VMD .5s;
+    top: 1vw;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+@keyframes CMR {
+    0%{left: 85vw;}
+    50%{left: 64vw;}
+    100%{left: 65vw;}
+}
+.crosshairView{
+    width: 14vw;
+    height: 13vw;
+    top: 1vw;
+    left: 85vw;
+    position: absolute;
+    background: rgba(150, 150, 150, 0.05);
+    border-radius: 15px;
+    animation: CMR .5s;
+    left: 65vw;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.crosshairDotView{
+    width: 14vw;
+    height: 13vw;
+    top: 15vw;
+    left: 85vw;
+    position: absolute;
+    background: rgba(150, 150, 150, 0.05);
+    border-radius: 15px;
+    animation: CMR .5s;
+    left: 65vw;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+@keyframes TMU {
+    0%{top: 45vw;}
+    50%{top: 28vw;}
+    100%{top: 29vw;}
+}
+.friendly{
+    height: 15vw;
+    aspect-ratio: 16/9;
+    position: absolute;
+    top: 45vw;
+    left: 16vw;
+    background: rgba(150, 150, 150, 0.05);
+    border-radius: 15px;
+    animation: TMU .5s;
+    top: 29vw;
+}
+.enemy{
+    height: 15vw;
+    width: 27vw;
+    position: absolute;
+    top: 45vw;
+    left: 52vw;
+    background: rgba(150, 150, 150, 0.05);
+    border-radius: 15px;
+    animation: TMU .5s;
+    top: 29vw;
+}
+.home{
+    height: 3vw;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 44vw;
+    top: 41vw;
+    background-image: url('icons/home.png');
+    background-size: cover;
+}
+.full{
+    height: 3vw;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 48vw;
+    top: 41vw;
+    background-image: url('icons/full.png');
+    background-size: cover;
+}
+
+.source{
+    height: 15vw;
+    width: 7vw;
+    position: absolute;
+    background: rgba(150, 150, 150, 0.05);
+    left: 44vw;
+    top: 29vw;
+    text-align: center;
+    border-radius: 15px;
+}
