@@ -159,6 +159,7 @@ body{
     height: 2vw;
     align-items: center;
     border-radius: 15px;
+    font-size: .75vw;
     display: flex;
     justify-content: space-between;
     overflow: hidden;
