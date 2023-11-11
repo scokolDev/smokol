@@ -1,6 +1,59 @@
 body{
     background: #0e0e0e;
 }
+@keyframes showDonationMenu {
+    0%{left: 0%;};
+    100%{left:20vw};
+}
+@keyframes showHelpMenu {
+    0%{left: 0%;};
+    100%{left:20vw};
+}
+.donationHandle{
+    background: #909090;
+    position: absolute;
+    top: 20vh;
+    width: 10vw;
+    left: 0%;
+    background-image: url("icons/heart.png");
+    background-size: cover;
+    aspect-ratio: 1;
+}
+.donationMenu{
+    background:#909090;
+    position: absolute;
+    width: 20vw;
+    height: 35vw;
+    left: -20vw;
+}  
+.donationHandle:hover{
+    z-index: 9;
+    animation: showDonationMenu 1.5s;
+    left: 20vw;
+}
+
+.helpHandle{
+    background: #909090;
+    position: absolute;
+    top: calc(20vh + 11vw);
+    width: 10vw;
+    left: 0%;
+    background-image: url("icons/questionMark.png");
+    background-size: cover;
+    aspect-ratio: 1;
+}
+.helpMenu{
+    background:red;
+    position: absolute;
+    width: 20vw;
+    height: 35vw;
+    top: -11vw;
+    left: -20vw;
+}  
+.helpHandle:hover{
+    animation: showHelpMenu 1.5s;
+    left: 20vw;
+}                                                                                                                                                                                                                                                                                                                                                                                  
 .Wrapper{
     background: #232323;
     padding: 0%;
